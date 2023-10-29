@@ -1,0 +1,24 @@
+<p>our-trips works!</p>
+ 
+<div id="divTables">
+<table class="table table-hover" style="width: 50%;">
+  <thead>
+    <tr>
+      <th>מקום היעד </th>
+      <th>תאריך</th>
+      <!-- <th>סוג טיול </th>
+      <th>מספר מקומות</th> -->
+
+    </tr>
+  </thead>
+  <tbody  >
+    <tr  *ngFor="let f of CTrips.listTrips " (click)="selectedTrip=f" >
+      <td >{{f.tripYaad}}</td>
+      <td>{{f.date | date : 'dd-MM-yyyy'}}</td>
+
+   </tr>
+   </tbody>
+</table>
+<app-trip-deatiles [Trip]="selectedTrip" ></app-trip-deatiles>
+</div>
+
